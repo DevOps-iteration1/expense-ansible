@@ -1,0 +1,15 @@
+- name: Clean the Old Content
+  ansible.builtin.file:
+    path: "{{ app_loc }}" # Ila unte we need to use in double quotes I mean calling variable directly
+    state: absent
+
+- name: Create app directory
+  ansible.builtin.file:
+    path: "{{ app_loc }}"
+    state: directory
+
+- name: Download and Extract App Content
+  ansible.builtin.unarchive:
+    src: https://expense-artifacts.s3.amazonaws.com/expense-{{ component }}-v2.zip
+    des: /app
+    remote_src: yes
