@@ -38,7 +38,7 @@
     name:
       - PyMySQL
       - cryptography
-    state: pip3.9
+    executable: pip3.9
 
 - name: Load Schema
   community.mysql.mysql_db:
