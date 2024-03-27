@@ -11,7 +11,7 @@
 
 - name: Adding Application User
   ansible.builtin.user:
-    name: Expense
+    name: expense
 
 - name: Importing App-Pre-Req common
   ansible.builtin.import_role:
