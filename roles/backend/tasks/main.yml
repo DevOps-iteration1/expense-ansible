@@ -30,7 +30,7 @@
 
 - name: Install MySQL Client
   ansible.builtin.dnf:
-    name: MySQL
+    name: mysql
     state: latest
 
 - name: Install Python MySQL Client
