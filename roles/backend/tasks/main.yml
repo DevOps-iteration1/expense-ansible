@@ -28,6 +28,11 @@
     src: backend.service
     dest: /etc/systemd/system/backend.service
 
+- name: Install MySQL Client
+  ansible.builtin.dnf:
+    name: MySQL
+    state: latest
+
 - name: Install Python MySQL Client
   ansible.builtin.dnf:
     name:
