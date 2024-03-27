@@ -45,9 +45,9 @@
     state: import
     name: all
     target: /app/schema/backend.sql
-    login_user: Expense
+    login_user: root
     login_password: ExpenseApp@1
-    login_host: mysql-dev.vdevops.com
+    login_host: 172.31.45.189
 
 - name: Start Backend Service
   ansible.builtin.systemd.service:
