@@ -34,7 +34,7 @@
     state: latest
 
 - name: Install Python MySQL Client
-  ansible.builtin.dnf:
+  ansible.builtin.pip:
     name:
       - PyMySQL
       - cryptography
