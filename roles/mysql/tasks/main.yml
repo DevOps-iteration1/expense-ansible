@@ -23,6 +23,7 @@
     login_host: 172.31.45.189
     filter: version
   register: mysql_connection_output
+  ignore_errors: yes
 
 #- name: Print
 #  ansible.builtin.debug:
