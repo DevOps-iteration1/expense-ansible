@@ -20,7 +20,7 @@
   community.mysql.mysql_info:
     login_user: root
     login_password: ExpenseApp@1
-    login_host: 172.31.45.189
+    login_host: mysql-{{ dev }}.vdevops.cloud
     filter: version
   register: mysql_connection_output
   ignore_errors: yes
