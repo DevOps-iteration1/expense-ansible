@@ -9,5 +9,25 @@
     state: started
     enabled: yes
 
+- name: Install Python MySQL Client
+  ansible.builtin.pip:
+    name:
+      - PyMySQL
+      - cryptography
+    executable: pip3.9
+
+- name: Load Schema
+  community.mysql.mysql_info:
+    login_user: root
+    login_password: ExpenseApp@1
+    login_host: 172.31.45.189
+    filter: version
+  register: mysql_connection_output
+
+#- name: Print
+#  ansible.builtin.debug:
+#    msg: "{{mysql_connection_output}}"
+
 - name: Setup MySQL password
   ansible.builtin.shell: mysql_secure_installation --set-root-pass ExpenseApp@1
+  when: mysql_connection_output.failed is true
