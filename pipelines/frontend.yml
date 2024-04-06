@@ -9,55 +9,55 @@ pipelines:
         auto_update: true
         branch: main
     stages:
-      - DEV:
-          fetch_materials: true
-          approval:
-            type: manual
-          jobs:
-            ansible-playbook:
-              tasks:
-                - exec:
-                    arguments:
-                      - ansible.sh
-                      - frontend
-                    command: bash #bash ansible.sh
-                    run_if: passed
-      - QA :
-          fetch_materials: true
-          approval:
-            type: manual
-          jobs:
-            ansible-playbook:
-              tasks:
-                - exec:
-                    arguments:
-                      - ansible.sh
-                      - frontend
-                    command: bash #bash ansible.sh
-                    run_if: passed
-      - STAGE:
-          fetch_materials: true
-          approval:
-            type: manual
-          jobs:
-            ansible-playbook:
-              tasks:
-                - exec:
-                    arguments:
-                      - ansible.sh
-                      - frontend
-                    command: bash #bash ansible.sh
-                    run_if: passed
-      - PROD:
-          fetch_materials: true
-          approval:
-            type: manual
-          jobs:
-            ansible-playbook:
-              tasks:
-                - exec:
-                    arguments:
-                      - ansible.sh
-                      - frontend
-                    command: bash #bash ansible.sh
-                    run_if: passed
+    - DEV:
+        fetch_materials: true
+        approval:
+          type: manual
+        jobs:
+          ansible-playbook:
+            tasks:
+              - exec:
+                  arguments:
+                    - ansible.sh
+                    - frontend
+                  command: bash #bash ansible.sh
+                  run_if: passed
+    - QA :
+        fetch_materials: true
+        approval:
+          type: manual
+        jobs:
+          ansible-playbook:
+            tasks:
+              - exec:
+                  arguments:
+                    - ansible.sh
+                    - frontend
+                  command: bash #bash ansible.sh
+                  run_if: passed
+    - STAGE:
+        fetch_materials: true
+        approval:
+          type: manual
+        jobs:
+          ansible-playbook:
+            tasks:
+              - exec:
+                  arguments:
+                    - ansible.sh
+                    - frontend
+                  command: bash #bash ansible.sh
+                  run_if: passed
+    - PROD:
+        fetch_materials: true
+        approval:
+          type: manual
+        jobs:
+          ansible-playbook:
+            tasks:
+              - exec:
+                  arguments:
+                    - ansible.sh
+                    - frontend
+                  command: bash #bash ansible.sh
+                  run_if: passed
