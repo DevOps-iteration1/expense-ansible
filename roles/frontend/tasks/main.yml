@@ -3,6 +3,10 @@
     name: nginx
     state: latest
 
+- name: Adding Application User
+  ansible.builtin.user:
+    name: "{{app_user}}"
+
 - name: Importing App-Pre-Req common
   ansible.builtin.import_role:
     name: common
