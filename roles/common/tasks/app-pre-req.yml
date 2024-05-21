@@ -8,6 +8,7 @@
     path: "{{ app_loc }}"
     state: directory
     owner: "{{app_user}}"
+    group: "{{app_user}}"
 
 - name: Download and Extract App Content
   ansible.builtin.unarchive:
@@ -15,3 +16,4 @@
     dest: "{{ app_loc }}"
     remote_src: yes
     owner: "{{app_user}}"
+    group: "{{app_user}}"
