@@ -7,6 +7,7 @@
   ansible.builtin.file:
     path: "{{ app_loc }}"
     state: directory
+    owner: "{{app_user}}"
 
 - name: Download and Extract App Content
   ansible.builtin.unarchive:

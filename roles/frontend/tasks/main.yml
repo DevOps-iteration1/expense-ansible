@@ -13,6 +13,11 @@
     name: common
     tasks_from: app-pre-req
 
+- name: Importing App-Pre-Req common
+  ansible.builtin.import_role:
+    name: newrelic
+    tasks_from: nginx
+
 - name: Restart Nginx
   ansible.builtin.service:
     name: nginx
