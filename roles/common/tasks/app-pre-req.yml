@@ -17,3 +17,6 @@
     remote_src: yes
     owner: "{{app_user}}"
     group: "{{app_user}}"
+
+- name: Install ansible hvac
+  ansible.builtin.shell: sudo pip3.11 install ansible hvac -y
