@@ -9,7 +9,7 @@ pipelines:
         auto_update: true
         branch: main
     secure_variables:
-      vault_token: AES:p5w3xpd1h78xAyNggBiGkg==:ZFKICRRrr5OA14zf1x9UjpVR/OVDsi/jaZGF9+qgDaH1ca1tJdgW+mhvaBsc0SAf
+      vault_token: AES:tRFYdKNbm847TIJ/sVs9Zg==:sRXYPM1ynmQT4XHrekBhrpuFfzUyzVz81V5YkX6jQHLsp4NVmqf1YOITOcyLQ246
     stages: # Need to check indentation
       - DEV:
           fetch_materials: true
