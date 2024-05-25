@@ -1,0 +1,5 @@
+- name: Install logstash
+  ansible.builtin.dnf:
+    name: logstash
+    state: installed
+
