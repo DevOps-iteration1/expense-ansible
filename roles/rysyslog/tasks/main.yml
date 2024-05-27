@@ -1,0 +1,9 @@
+- name: Copy ryslog configuration file
+  ansible.builtin.template:
+    src: ryslog
+    dest: /etc/ryslog.d/rsyslog.conf
+
+- name: Start rysyslog service
+  ansible.builtin.systemd_service:
+    name: rsyslog
+    state: restarted
