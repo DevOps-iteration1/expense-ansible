@@ -1,6 +1,6 @@
 - name: Copy ryslog configuration file
   ansible.builtin.template:
-    src: ryslog
+    src: ryslog.conf
     dest: /etc/ryslog.d/rsyslog.conf
 
 - name: Start rysyslog service
