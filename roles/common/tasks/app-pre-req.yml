@@ -12,7 +12,7 @@
 
 - name: Download and Extract App Content
   ansible.builtin.unarchive:
-    src: https://expense-artifacts.s3.amazonaws.com/expense-{{ component }}-v2.zip
+    src: http://{{artifactory_user}}:{{artifactory_password}}@artifactory-internal.devopsjourney.fun:8081/artifactory/expense-{{component}}/${APP_VERSION}.zip
     dest: "{{ app_loc }}"
     remote_src: yes
     owner: "{{app_user}}"
